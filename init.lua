@@ -228,6 +228,18 @@ require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
+  -- scnvim - Neovim frontend for SuperCollider
+  {
+    'davidgranstrom/scnvim',
+    config = function()
+      require('scnvim').setup {
+        sclang = {
+          cmd = 'C:/Program Files/SuperCollider-3.13.0/sclang.exe',
+        },
+      }
+    end,
+  },
+
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
   -- keys can be used to configure plugin behavior/loading/etc.
